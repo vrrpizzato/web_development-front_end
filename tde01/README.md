@@ -18,6 +18,20 @@
   return element?.value || '';
 }`
 
-Retorna o valor do elemento HTML input a partir de seu ID.
+Retorna o valor do elemento HTML `input` a partir de seu ID, caso o elemento não exista ou vazio, retorna uma string vazia (`''`). 
 
 
+#### &calcularOperacao/5
+
+`function calcularOperacao(id1, id2, operacao, resultadoId, errorMensagem) {
+  const valor1 = getValor(id1);
+  const valor2 = getValor(id2);
+
+  if (valor1 === '' || valor2 === '') {
+    alert(errorMensagem);
+    return;
+  } else {
+    const resultado = operacao(parseInt(valor1), parseInt(valor2));
+    document.getElementById(resultadoId).textContent = \`${resultado}\`;
+  }
+}`
