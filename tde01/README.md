@@ -13,10 +13,10 @@
 ## SCRIPT.JS
 #### &getValor/1
 
-`function getValor(id) {
-  const element = document.getElementById(id);
-  return element?.value || '';
-}`
+`function getValor(id) {`
+  `const element = document.getElementById(id);`
+  `return element?.value || '';`
+`}`
 
 Retorna o valor do elemento HTML `input` a partir de seu ID, caso o elemento não exista ou vazio, retorna uma string vazia (`''`). 
 
