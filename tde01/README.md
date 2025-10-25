@@ -35,3 +35,33 @@ Retorna o valor do elemento HTML `input` a partir de seu ID, caso o elemento nã
 }}`
   
 Executa uma opereção matemática entre dois valores de elementos HTML `input`, respectivamente, `id1` e `id2`, caso algum campo esteja vazio, exibe a mensagem de erro `errorMensagem`. O resultado é exibido em um elemento HTML com o atributo ID `resultadoId`. 
+
+
+#### &filtroPar/1
+
+`function filtroPar(arrayInput) {
+  if (arrayInput == '') {
+    alert('Por favor, insira números inteiros no campo para realizar os métodos.');
+  } else {
+    const arrayValues = arrayInput.split(",");
+    const resultado = arrayValues.filter((inteiro) => (inteiro % 2) == 0);
+    document.getElementById('array-resultado').textContent = `${resultado.toString()}`;
+  }
+}`
+
+Filta os números pares de uma lista de inteiros a partir de uma string. O resultado é exibido em um elemento HTML com o atributo ID `array-resultado`.
+
+
+#### &calcularMedia/1
+
+`function filtroPar(arrayInput) {
+  if (arrayInput == '') {
+    alert('Por favor, insira números inteiros no campo para realizar os métodos.');
+  } else {
+    const arrayValues = arrayInput.split(",");
+    const resultado = arrayValues.filter((inteiro) => (inteiro % 2) == 0);
+    document.getElementById('array-resultado').textContent = `${resultado.toString()}`;
+  }
+}`
+
+Calcula a média aritmética simples de uma lista de inteiros a partir de uma string. O resultado é exibido em um elemento HTML com o atributo ID `array-resultado`.
