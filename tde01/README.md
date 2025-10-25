@@ -13,6 +13,7 @@
 ## SCRIPT.JS
 #### &getValor/1
 Retorna o valor do elemento HTML input a partir de seu ID.
+
 ``function getValor(id) {
   const element = document.getElementById(id);
   return element?.value || '';
