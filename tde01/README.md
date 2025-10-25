@@ -24,14 +24,14 @@ Retorna o valor do elemento HTML `input` a partir de seu ID, caso o elemento nã
 #### &calcularOperacao/5
 
 `function calcularOperacao(id1, id2, operacao, resultadoId, errorMensagem) {
-  const valor1 = getValor(id1);
-  const valor2 = getValor(id2);
-
-  if (valor1 === '' || valor2 === '') {
-    alert(errorMensagem);
-    return;
-  } else {
-    const resultado = operacao(parseInt(valor1), parseInt(valor2));
-    document.getElementById(resultadoId).textContent = \`${resultado}\`;
-  }
-}`
+    const valor1 = getValor(id1);
+    const valor2 = getValor(id2);
+    if (valor1 === '' || valor2 === '') {
+      alert(errorMensagem);
+      return;
+    } else {
+      const resultado = operacao(parseInt(valor1), parseInt(valor2));
+      document.getElementById(resultadoId).textContent = `${resultado}`;
+}}`
+  
+Executa uma opereção matemática entre dois valores de elementos HTML `input`, respectivamente, `id1` e `id2`, caso algum campo esteja vazio, exibe a mensagem de erro `errorMensagem`. O resultado é exibido em um elemento HTML com o atributo ID `resultadoId`. 
