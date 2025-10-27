@@ -17,6 +17,29 @@ window.onload = function() {
     }
   }
 
+  function filtroPar(arrayInput) {
+    if (arrayInput === '') {
+      alert('Por favor, insira números inteiros no campo para realizar os métodos.');
+      return;
+    } else {
+      const arrayValues = arrayInput.split(',');
+      const resultado = arrayValues.filter((inteiro) => (inteiro % 2 ) == 0);
+      document.getElementById('array-resultado').textContent = `${resultado.toString()}`;
+    }
+  };
+
+  function calcularMedia(arrayInput) {
+    if (arrayInput === '') {
+      alert('Por favor, insira números inteiros no campo para realizar os métodos.');
+      return;
+    } else {
+      const arraValues = arrayInput.split(',');
+      const n = arrayValues.length;
+      const resultado = arrayValues.reduce((acc, value) => acc + parseInt(value), 0) / n;
+      document.getElementById('array-resultado').textContent = `${resultado.toFixed(2}`;
+    }
+  }
+
   const adicaoBtn = document.getElementById("btn-adicao");
   if (adicaoBtn) {
     adicaoBtn.addEventListener("click", function() {
@@ -49,13 +72,7 @@ window.onload = function() {
   if (filtroParBtn) {
     filtroParBtn.addEventListener("click", function () {
       const arrayInput = getValor('input-array');
-      if (arrayInput == '') {
-        alert('Por favor, insira números inteiros no campo para realizar os métodos.');
-      } else {
-        const arrayValues = arrayInput.split(",");
-        const resultado = arrayValues.filter((inteiro) => (inteiro % 2) == 0);
-        document.getElementById('array-resultado').textContent = `${resultado.toString()}`;
-      }
+      filtroPar(arrayInput);
     });
   }
   
@@ -63,14 +80,7 @@ window.onload = function() {
   if (calcularMediaBtn) {
     calcularMediaBtn.addEventListener("click", function () {
       const arrayInput = getValor('input-array');
-      if (arrayInput == '') {
-        alert('Por favor, insira números inteiros no campo para realizar os métodos.');
-      } else {
-        const arrayValues = arrayInput.split(",");
-        const n = arrayValues.length;
-        const resultado = arrayValues.reduce((acc, valor) => acc + parseInt(valor), 0) / n;
-        document.getElementById('array-resultado').textContent = `${resultado.toFixed(2)}`;
-      }
+      calcularMedia(arrayInput);
     });
   }
 }
