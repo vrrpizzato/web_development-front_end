@@ -33,10 +33,10 @@ window.onload = function() {
       alert('Por favor, insira números inteiros no campo para realizar os métodos.');
       return;
     } else {
-      const arraValues = arrayInput.split(',');
+      const arrayValues = arrayInput.split(',');
       const n = arrayValues.length;
       const resultado = arrayValues.reduce((acc, value) => acc + parseInt(value), 0) / n;
-      document.getElementById('array-resultado').textContent = `${resultado.toFixed(2}`;
+      document.getElementById('array-resultado').textContent = `${resultado.toFixed(2)}`;
     }
   }
 
