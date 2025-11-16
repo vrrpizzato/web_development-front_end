@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro | Romano Bookshelf</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js"></script>
+</head>
+<body>
+    
+  <nav class="bg-white">
+	<div class="flex justify-center gap-4 w-full bg-darkgray border rounded">
+		<div class="py-4"><a class="font-bold text-white" href="./index.html">Catalogo</a></div>
+		<div class="py-4"><a class="font-bold text-white" href="./form.html">Cadastro</a></div>
+		<div class="py-4"><a class="font-bold text-white" href="./sobre.html">Sobre</a></div>
+		<div class="py-4"><a class="font-bold text-white" href="./contato.html">Contato</a></div>
+	</div>
+  </nav>
+ <div class="h-screen w-full">
+    <div class="flex justify-center m-4">
+      <form name="formulario" class="grid border border-2 border-gray rounded-lg gap-2 bg-darkgray text-white w-1/3">
+      <span class="flex w-full py-2 justify-center text-white font-bold">ADICIONAR LIVRO</span>
+
+      <div class="grid grid-cols-4 w-full">
+        <div class="flex justify-end w-full">
+          <label for="titulo">Título:</label>
+        </div>
+        <input type="text" id="titulo" name="titulo" class="col-span-3 mx-2 w-2/3"/>
+      </div>
+      <div class="flex justify-center w-full">
+        <span id="errorTitulo" class="text-red text-sm font-bold"></span>
+      </div>
+
+      <div class="grid grid-cols-4 w-full">
+        <div class="flex justify-end w-full">
+          <label for="publicacao">Publicação:</label>
+        </div>
+        <input type="date" id="publicacao" name="publicacao" class="col-span-3 mx-2 w-2/3"/>
+      </div>
+      <div class="flex justify-center w-full">
+        <span id="errorPublicacao" class="text-red text-sm font-bold"></span>
+      </div>
+
+      <div class="grid grid-cols-4 w-full">
+        <div class="flex justify-end w-full">
+          <label for="editora">Editora:</label>
+        </div>
+        <input type="text" id="editora" name="editora" class="col-span-3 mx-2 w-2/3"/>
+      </div>
+      <div class="flex justify-center w-full">
+        <span id="errorEditora" class="text-red text-sm font-bold"></span>
+      </div>
+
+      <div class="grid grid-cols-4 w-full">
+        <div class="flex justify-end w-full">
+          <label for="edicao">Edição:</label>
+        </div>
+        <input type="text" id="edicao" name="edicao" class="col-span-3 mx-2 w-2/3"/>
+      </div>
+      <div class="flex justify-center w-full">
+        <span id="errorEdicao" class="text-red text-sm font-bold"></span>
+      </div>
+
+      <div class="grid grid-cols-4 w-full">
+        <div class="flex justify-end w-full">
+          <label for="idioma">Idioma:</label>
+        </div>
+        <input type="text" id="idioma" name="idioma" class="col-span-3 mx-2 w-2/3"/>
+      </div>
+      <div class="flex justify-center w-full">
+        <span id="errorIdioma" class="text-red text-sm font-bold"></span>
+      </div>
+
+      <div class="grid grid-cols-4 w-full">
+        <div class="flex justify-end w-full">
+          <label for="isbn10">ISBN10:</label>
+        </div>
+        <input type="text" id="isbn10" name="isbn10" class="col-span-3 mx-2 w-2/3"/>
+      </div>
+      <div class="flex justify-center w-full">
+        <span id="errorIsbn10" class="text-red text-sm font-bold"></span>
+      </div>
+
+      <div class="grid grid-cols-4 w-full">
+        <div class="flex justify-end w-full">
+          <label for="isbn13">ISBN13:</label>
+        </div>
+        <input type="text" id="isbn13" name="isbn13" class="col-span-3 mx-2 w-2/3"/>
+      </div>
+      <div class="flex justify-center w-full">
+        <span id="errorIsbn13" class="text-red text-sm font-bold"></span>
+      </div>
+
+      <div class="grid grid-cols-4 w-full">
+        <div class="flex justify-end w-full">
+          <label for="numero_paginas">Nº Páginas:</label>
+        </div>
+        <input type="text" id="numero_paginas" name="numero_paginas" class="col-span-3 mx-2 w-2/3"/>
+      </div>
+      <div class="flex justify-center w-full">
+        <span id="errorNumeroPaginas" class="text-red text-sm font-bold"></span>
+      </div>
+
+      <div class="grid grid-cols-4 w-full">
+        <div class="flex justify-end w-full">
+          <label for="peso">Peso (g):</label>
+        </div>
+        <input type="text" id="peso" name="peso" class="col-span-3 mx-2 w-2/3"/>
+      </div>
+      <div class="flex justify-center w-full">
+        <span id="errorPeso" class="text-red text-sm font-bold"></span>
+      </div>
+
+      <div class="grid grid-cols-4 w-full">
+        <div class="flex justify-end w-full">
+          <label for="dimensoes">Dimensões (cm):</label>
+        </div>
+        <input type="text" id="dimensoes" name="dimensoes" class="col-span-3 mx-2 w-2/3"/>
+      </div>
+      <div class="flex justify-center w-full">
+        <span id="errorDimensoes" class="text-red text-sm font-bold"></span>
+      </div>
+
+      <input type="submit" class="m-2" value="Submit"/>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
