@@ -6,8 +6,8 @@ window.onload = function () {
     loadEditData(id);
   }
 
-  setupValidation();
-  setupFormSubmit(id);
+  validation();
+  formSubmit(id);
 };
 
 function loadEditData(id) {
@@ -30,7 +30,7 @@ function loadEditData(id) {
     .catch(err => console.error("Erro ao carregar livro:", err));
 }
 
-function setupValidation() {
+function validation() {
   window.validationArr = new Array(10).fill(false);
 
   validateText("titulo", 0, 3, "errorTitulo", "*titulo deve conter no mínimo 3 caracteres");
@@ -63,14 +63,18 @@ function validateText(id, index, minLength, errorId, message) {
   });
 }
 
-function setupFormSubmit(id) {
+function formSubmit(id) {
   const form = document.forms["formulario"];
 
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
+    
+    if (window.validationArr.includes(false)) {
+      window.alert("Por favor, preencha todos os campos.");
+      return;
+    }
 
-
-    const payload = {
+    const body = {
       book: {
       titulo: form.titulo.value,
       data_publicacao: form.publicacao.value,
@@ -89,13 +93,13 @@ function setupFormSubmit(id) {
         await fetch(`http://localhost:4000/api/books/${id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(body)
         });
       } else {
         await fetch("http://localhost:4000/api/books", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(body)
         });
       }
 
