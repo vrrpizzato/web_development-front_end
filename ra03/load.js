@@ -46,13 +46,15 @@ window.onload = function () {
 
       document.querySelectorAll(".btn-excluir").forEach((btn) => {
         btn.addEventListener("click", function () {
-          const id = this.dataset.id;
-          fetch(`http://localhost:4000/api/books/${id}`, { method: "DELETE" })
-            .then(response => {
-              window.location.href = "./index.html";
-            })
-            .catch(err => console.error(err));
-          });
+          if (window.confirm("Deseja excluir?")) {
+            const id = this.dataset.id;
+            fetch(`http://localhost:4000/api/books/${id}`, { method: "DELETE" })
+              .then(response => {
+                window.location.href = "./index.html";
+              })
+              .catch(err => console.error(err));
+          }
+        });
       });
     })
     .catch((error) => {
