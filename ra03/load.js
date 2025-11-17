@@ -12,7 +12,7 @@ window.onload = function () {
       const html = items.reduce(
         (acc, book) =>
           acc +
-          `<div id="${book.id}" class="w-full bg-darkgray border p-4 rounded text-white">
+          `<div id="${book.id}" class="w-3/4 bg-darkgray border p-4 rounded text-white">
               <p><strong>Titulo:</strong> ${book.titulo}</p>
               <p><strong>Editora:</strong> ${book.editora}</p>
               <p><strong>Publicação:</strong> ${book.data_publicacao}</p>
